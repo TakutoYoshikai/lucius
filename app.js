@@ -67,7 +67,7 @@ function sendTweetsToSlack(tweets) {
 }
 
 function saveLastTweetId(id){
-	fs.writeFileSync("last_tweet_id.txt", "" + id);
+	fs.writeFileSync("last_tweet_id.txt", id.toString());
 }
 
 function start() {
