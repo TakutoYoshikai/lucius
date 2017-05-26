@@ -77,6 +77,9 @@ function start() {
 			},
 			function (error, tweets, response) {
 				var targets = tweets.statuses.filter(function(tweet){
+					if (tweet.user.name.indexOf(name) != -1){
+						return false;
+					}
 					if (tweet.id <= lastTweetId){
 						return false;
 					}
