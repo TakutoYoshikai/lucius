@@ -19,14 +19,22 @@ let slackName = "Your slack username";
         "token": "your token"
 }
 ```
-
-5. 自分に関するツイート以外を取り除く為、ignore.txtに無視したい単語を追加する。
+5. TwitterのDeveloperページにログインし、以下のtokenを生成し、twitter.jsonで指定する
+```
+{
+  "consumer_key" : "xxx",
+  "consumer_secret" : "yyy",
+  "access_token_key" : "zzz",
+  "access_token_secret": "ttt"
+}
+```
+6. 自分に関するツイート以外を取り除く為、ignore.txtに無視したい単語を追加する。
 ```
 吉開太郎
 吉開花子
 吉開二郎
 ```
-6. Node.jsをインストール
+7. Node.jsをインストール
 動作が確認出来ているのはNode.js v6.2.0
 
-7. cron経由で一定時間おきに実行
+8. cron経由で一定時間おきに実行
