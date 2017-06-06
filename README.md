@@ -37,4 +37,5 @@ let slackName = "Your slack username";
 7. Node.jsをインストール
 動作が確認出来ているのはNode.js v6.2.0
 
-8. cron経由で一定時間おきに実行
+8. npm install
+9. cron経由で一定時間おきに実行
