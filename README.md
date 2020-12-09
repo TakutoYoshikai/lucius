@@ -1,26 +1,26 @@
 # Lucius
-ルシウスはあなたの名前がTwitter上で呟かれた時、あなたに知らせてくれる下僕です。
+Lucius is a egosurfing bot.
 
-## 使い方
-1. ターミナルでClone
-```
+### Usage
+**1. git clone**
+```bash
 git clone https://github.com/TakutoYoshikai/lucius.git
 ```
-2. app.jsのname変数を自分の名前に変更
-```
+**2. change name variable in app.js**
+```javascript
 let name = "Your name";
 let slackName = "Your slack username";
 ```
-3. SlackにBotを作成し、Tokenを取得
-4. 取得したTokenをslack.jsonで指定
-```
+**3. create a bot application on your slack workspace, and copy the token.**
+**4. write the token in slack.json**
+```json
 {
         "name": "lucius",
         "token": "your token"
 }
 ```
-5. TwitterのDeveloperページにログインし、以下のtokenを生成し、twitter.jsonで指定する
-```
+**5. log in on Twitter, and generate tokens below, and write the tokens in twitter.json.**
+```json
 {
   "consumer_key" : "xxx",
   "consumer_secret" : "yyy",
@@ -28,14 +28,12 @@ let slackName = "Your slack username";
   "access_token_secret": "ttt"
 }
 ```
-6. 自分に関するツイート以外を取り除く為、ignore.txtに無視したい単語を追加する。
+**6. add the words in ignore.txt if you ignore specific words.**
+```text
+John
+Bob
+Alice
 ```
-吉開太郎
-吉開花子
-吉開二郎
-```
-7. Node.jsをインストール
-動作が確認出来ているのはNode.js v6.2.0
+**8. npm install**
 
-8. npm install
-9. cron経由で一定時間おきに実行
+**9. register a cron job.**
